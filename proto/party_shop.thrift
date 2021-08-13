@@ -28,10 +28,6 @@ struct PartyFilterRequest {
     3: optional ContractFilter contract_filter
 }
 
-service SearchService {
-    list<PartyId> findPartyIds(1: PartyFilterRequest request)
-}
-
 enum PaymentInstitutionRealm{
     test
     live
@@ -40,7 +36,7 @@ enum PaymentInstitutionRealm{
 /**
  * Сервис для получения информации о магазинах по party
  **/
-service PartyShopService {
+service VortigonService {
 
     /**
      * Получение идентификаторов магазинов по party в разрезе тестовой или продовой среды
